@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Karttasovellus </title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/sijainti_ja_kartta.js"></script>
+
+    <link rel="stylesheet" href="css/sijainti_ja_kartta.css"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+     crossorigin=""></script>
+
+  </head>
+  <body>
+
+    <div class="otsikko">
+      <img src="kuvat/taustakuva.jpg" alt="Tässä pitäisi olla taustakuva" width=100%>
+      <div class="otsikon_teksti">
+        <h1> Seikkaillaan kartalla </h1>
+        <p> Kodareiden Mini Full Stack -kurssilla. </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <p> pituusasteet </p>
+        <p id="pituusasteet"></p>
+      </div>
+      <div class="col-sm-9">
+        <p> leveysasteet </p>
+        <p id="leveysasteet"> </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-7">
+
+        <div id="kartta"> </div>
+      </div>
+    </div>
+    <button onClick="avaa_paikkatietolomake();" type="button" class="btn btn-secondary oma_nappi">Tallenna sijainti</button>
+
+    <div id="paikkatietolomake">
+      <form id="lomake">
+        <div class="form-group">
+          <label for="paikka">Paikka: </label>
+          <input type="text" class="form-control" id="paikka">
+        </div>
+        <div class="form-group">
+          <label for="arvostelu">Arvostelu: </label>
+          <input type="text" class="form-control" id="arvostelu">
+        </div>
+        <button onClick="laheta_arvostelu();" type="button" class="btn btn-secondary oma_nappi">Lähetä</button>
+        <button onClick="sulje_paikkatietolomake();" type="button" class="btn btn-secondary oma_nappi">Peruuta</button>
+      </form>
+    </div>
+  </body>
+</html>

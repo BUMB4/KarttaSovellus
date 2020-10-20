@@ -1,0 +1,27 @@
+{
+  "name": "tiistai-karttasovellus",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vekkumasa/Tiistai-karttasovellus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vekkumasa/Tiistai-karttasovellus/issues"
+  },
+  "homepage": "https://github.com/Vekkumasa/Tiistai-karttasovellus#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
