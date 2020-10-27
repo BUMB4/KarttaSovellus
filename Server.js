@@ -7,7 +7,7 @@ app.use(express.json({limit: '1mb'}));
 
 const paikat = [
   {
-    "paikka" : "Helsinki",
+    "paikka": "Helsinki",
     "arvostelu": "kivaa oli",
     "longitude": "24.887296",
     "latitude": "60.2341376000004"
@@ -25,7 +25,7 @@ app.get('/api/paikat', function(request, response) {
 })
 
 app.post('/api/arvostelu', function(request, response) {
-  console.log('käyttäjän arvostelu');
+  console.log('Käyttäjän arvostelu');
   console.log(request.body);
   response.send(200);
 })
